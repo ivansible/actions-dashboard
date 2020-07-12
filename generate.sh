@@ -33,7 +33,8 @@ writeout() { output="$output""$1"; }
 parse_repo() {
     repo="https://github.com/$1"
     repotmp="$tmpd/$1"
-    writeout "$1\n\n"
+    reponame=${repo##*/}
+    writeout "${reponame}\n"
     rm -rf "$repotmp"
     git clone --bare "$repo" "$repotmp" 2> /dev/null
 
@@ -43,10 +44,8 @@ parse_repo() {
         name=$(yq r <(curl -sL "https://raw.githubusercontent.com/$1/master/$workflow") name)
         [ -z "$name" ] && name="$workflow"
         encoded_name="$(urlencode "$name")"
-        writeout "["
-        writeout "![${name}](${repo}/workflows/$encoded_name/badge.svg)"
-        writeout "]"
-        writeout "(${repo}/actions?query=workflow:\"$encoded_name\") "
+        writeout " [![${name}](${repo}/workflows/$encoded_name/badge.svg)]"
+        writeout "(${repo}/actions?query=workflow:\"$encoded_name\")"
         count=$((count+1))
     done < <(git -C "$repotmp" ls-tree -r HEAD | awk '{print $4}' | grep '^.github/workflows/')
 
@@ -79,7 +78,9 @@ tmpd="$(mktemp -d -t dashboardXXXX)"
 
 for i in "${inputs[@]}"; do
     echo Generating markdown for "${i##*/}"...
-    writeout "### ${i##*/}\n\n"
+    title=${i##*/}
+    title=${title%.*}
+    writeout "### ${title}\n\n"
     count=0
     while read -r line; do
         [[ "$line" = \#* ]] && continue

@@ -1,4 +1,4 @@
-## Github Actions dashboard
+## Github Actions Dashboard
 
 This tool generates a dashboard that shows live status of all github action
 workflows in a given set of github repositories.
@@ -27,29 +27,29 @@ Lines beginning with `#` are treated as comments.
 
 E.g.
 ```sh
-./generate.sh -o samples/gcp.md -i samples/gcp-repos \
+./generate.sh -o dashboard.md -i repos.txt \
   -i https://raw.githubusercontent.com/arjun024/actions-dashboard/master/samples/some-other-gcp-repos
 ```
 
-See [samples](./samples) for sample inputs and [sample output](./samples/gcp.md).
+See [sample input](./repos.txt) and [sample output](./dashboard.md).
 
-<img src="https://github.com/arjun024/actions-dashboard/blob/master/samples/sample.png?raw=true" width="550">
+<img src="https://github.com/ivansible/actions-dashboard/blob/master/sample.png?raw=true" width="550">
 
 
 ### Auto-regenerate
 
-You can use a [github-workflow like
-this](.github/workflows/check-for-workflows.yml) that runs the generate script
+You can use a [github workflow like
+this](.github/workflows/update-dashboard.yml) that runs the generate script
 every day to see if any workflow files have been added/removed from the repos
 listed in the input files.
 
-### How to use 
+### How to use
 
 * Fork this repository
 * Edit the sample input to list your repositories or create an input file or
   point to to your list of repos elsewhere
 * Run the generate script with the required options
 * Edit
-  [`.github/workflows/check-for-workflows.yml`](.github/workflows/check-for-workflows.yml)
+  [`.github/workflows/update-dashboard.yml`](.github/workflows/update-dashboard.yml)
   to run `generate.sh` with your command options in the `Generate` step.
 

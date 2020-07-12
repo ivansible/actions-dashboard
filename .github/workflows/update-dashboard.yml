@@ -1,7 +1,12 @@
-name: Check for workflows
+name: Update Dashboard
 on:
   schedule:
-  - cron: '0 13 * * *'
+    - cron: '0 4 * * *'
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
 
 jobs:
   check:
@@ -18,14 +23,13 @@ jobs:
 
     - name: Generate
       run: |
-        ./generate.sh -o samples/gcp.md -i samples/gcp-repos \
-          -i https://raw.githubusercontent.com/arjun024/actions-dashboard/master/samples/some-other-gcp-repos
-        if [ -z "$(git status -s -- samples/gcp.md)" ]; then
+        ./generate.sh -o dashboard.md -i repos.txt
+        if [ -z "$(git status -s -- dashboard.md)" ]; then
           echo No changes to commit
           exit 0
         fi
         git config user.email "check-action@github"
         git config user.name "check-action"
-        git add samples/gcp.md
-        git commit -m "Update dashboard markdown"
+        git add dashboard.md
+        git commit -m "update dashboard"
         git push origin master

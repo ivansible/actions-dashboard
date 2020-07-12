@@ -1,0 +1,11 @@
+ivansible/ivantory-test
+ivansible/dev-user
+ivansible/lin-core
+ivansible/lin-nginx
+ivansible/lin-ferm
+ivansible/lin-docker
+ivansible/lin-podman
+ivansible/lin-devel
+ivansible/srv-cgpro
+ivansible/dev-hosters
+ivansible/dev-ivantory
