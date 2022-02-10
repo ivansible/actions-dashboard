@@ -87,6 +87,33 @@ cert-master
 cert-replica
  [![test](https://github.com/ivansible/cert-replica/workflows/test/badge.svg)](https://github.com/ivansible/cert-replica/actions?query=workflow:"test")
 
+dev-nomad
+ [![test](https://github.com/ivansible/dev-nomad/workflows/test/badge.svg)](https://github.com/ivansible/dev-nomad/actions?query=workflow:"test")
+
+lin-motd
+ [![test](https://github.com/ivansible/lin-motd/workflows/test/badge.svg)](https://github.com/ivansible/lin-motd/actions?query=workflow:"test")
+
+lin-wireguard
+ [![test](https://github.com/ivansible/lin-wireguard/workflows/test/badge.svg)](https://github.com/ivansible/lin-wireguard/actions?query=workflow:"test")
+
+srv-dante
+ [![test](https://github.com/ivansible/srv-dante/workflows/test/badge.svg)](https://github.com/ivansible/srv-dante/actions?query=workflow:"test")
+
+srv-dyndns
+ [![dyndns-go](https://github.com/ivansible/srv-dyndns/workflows/dyndns-go/badge.svg)](https://github.com/ivansible/srv-dyndns/actions?query=workflow:"dyndns-go") [![test](https://github.com/ivansible/srv-dyndns/workflows/test/badge.svg)](https://github.com/ivansible/srv-dyndns/actions?query=workflow:"test")
+
+srv-vscode
+ [![test](https://github.com/ivansible/srv-vscode/workflows/test/badge.svg)](https://github.com/ivansible/srv-vscode/actions?query=workflow:"test")
+
+termux-bootstrap
+ [![test](https://github.com/ivansible/termux-bootstrap/workflows/test/badge.svg)](https://github.com/ivansible/termux-bootstrap/actions?query=workflow:"test")
+
+termux-core
+ [![test](https://github.com/ivansible/termux-core/workflows/test/badge.svg)](https://github.com/ivansible/termux-core/actions?query=workflow:"test")
+
+termux-ubuntu
+ [![test](https://github.com/ivansible/termux-ubuntu/workflows/test/badge.svg)](https://github.com/ivansible/termux-ubuntu/actions?query=workflow:"test")
+
 ---
 
 

@@ -27,3 +27,12 @@ ivansible/lin-restic
 ivansible/cert-cloudflare
 ivansible/cert-master
 ivansible/cert-replica
+ivansible/dev-nomad
+ivansible/lin-motd
+ivansible/lin-wireguard
+ivansible/srv-dante
+ivansible/srv-dyndns
+ivansible/srv-vscode
+ivansible/termux-bootstrap
+ivansible/termux-core
+ivansible/termux-ubuntu
