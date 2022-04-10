@@ -1,4 +1,15 @@
 ivansible/ivantory-test
+ivansible/asterisk
+ivansible/base
+ivansible/cert
+ivansible/devel
+ivansible/linux
+ivansible/nginx
+ivansible/server
+ivansible/termux
+ivansible/entware
+ivansible/ndms
+ivansible/vagrant
 ivansible/lin-core
 ivansible/lin-devel
 ivansible/lin-docker
